@@ -1,0 +1,29 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+.mainIcon {
+  position: relative;
+
+  width: 5rem;
+  border-right: 1px solid rgb(210, 207, 207);
+  /* display: block; */
+  /* background-color: rgb(116, 167, 167); */
+  height: 50rem;
+}
+/* icon */
+.logInIcon {
+  position: absolute;
+  bottom: 50px;
+}
+.anyIcon {
+  cursor: pointer;
+  font-size: 35px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.anyIcon:hover {
+  border: 3.5px solid orange;
+  border-radius: 8px;
+}

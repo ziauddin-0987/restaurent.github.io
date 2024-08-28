@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import { GrAdd } from "react-icons/gr";
 import { IoMdRefresh } from "react-icons/io";
 import { RiLayoutBottomFill } from "react-icons/ri";
@@ -6,14 +6,11 @@ import { RiLayoutBottomFill } from "react-icons/ri";
 import "./sideBar.css";
 
 function sideBar() {
-  const [itemsAdd ,setitemsAdd] = useState()
-  function itemsAddIn() {
 
-    
-  }
   return (
     <>
-      <div className="sideBar">
+      {/* <button onClick ={{onbtn ? "off btn" : "on btn"}}>onClick</button> */}
+      <div className="sideBar  zia">
         <div className="topSideBar">
           <div className="sidesecund">
             <div className="topSideBarAllIconIn">

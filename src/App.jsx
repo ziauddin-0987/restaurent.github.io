@@ -1,12 +1,18 @@
 import React from "react";
 import Sidebar from "./sideBar.jsx";
+import Leftsidebar from "./leftSideBar.jsx";
+import Topnavbar from "./topNavBar.jsx";
 
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Sidebar />
+      <Topnavbar />
+      <div className="topAndSideBarFLex">
+        <Leftsidebar />
+        <Sidebar />
+      </div>
     </>
   );
 }

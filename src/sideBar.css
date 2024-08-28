@@ -10,12 +10,15 @@
   display: flex;
   justify-content: end;
 }
+.zia {
+  /* display: none; */
+}
 
 .topSideBar {
   display: none;
   display: flex;
 
-  height: 45rem;
+  height: 40rem;
   width: 30rem;
   box-shadow: 2px;
   /* background-color: #c2fbd7; */
