@@ -9,14 +9,15 @@
   border-right: 1px solid rgb(210, 207, 207);
   /* display: block; */
   /* background-color: rgb(116, 167, 167); */
-  height: 50rem;
+  height: 47.9rem;
 }
 /* icon */
 .logInIcon {
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
 }
 .anyIcon {
+  color: rgb(128, 128, 128);
   cursor: pointer;
   font-size: 35px;
   padding: 10px;

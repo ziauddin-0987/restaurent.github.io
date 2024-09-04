@@ -1,4 +1,5 @@
-.topAndSideBarFLex {
+.topAndSideBarFLex,
+.leftAndCenter {
   display: flex;
   justify-content: space-between;
 }

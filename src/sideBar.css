@@ -6,7 +6,7 @@
 
 .sideBar {
   /* display: none; */
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
   justify-content: end;
 }
@@ -15,14 +15,14 @@
 }
 
 .topSideBar {
-  display: none;
+  /* display: none; */
   display: flex;
 
-  height: 40rem;
+  height: 48rem;
   width: 30rem;
   box-shadow: 2px;
   /* background-color: #c2fbd7; */
-  border-radius: 20px;
+  border-radius: 5px;
   border: 1px solid rgb(210, 207, 207);
 
   /* color: #008000; */

@@ -8,13 +8,14 @@ import { PiCurrencyDollarSimple } from "react-icons/pi";
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
 import { CiClock2 } from "react-icons/ci";
 import { RiLogoutCircleLine } from "react-icons/ri";
+// import { Link } from "reacr-router-dom";
 
 import "./leftSideBar.css";
 
 function LeftSideBat() {
   return (
     <>
-      <div className="mainIcon">
+      <div className="mainIcon zia uddin khan ">
         <div className="sevenIcon">
           <div className="oneIcon ">
             <CiHome className=" anyIcon" />
