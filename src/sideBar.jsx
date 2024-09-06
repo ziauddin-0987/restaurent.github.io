@@ -6,7 +6,6 @@ import { RiLayoutBottomFill } from "react-icons/ri";
 import "./sideBar.css";
 
 function sideBar() {
-
   return (
     <>
       {/* <button onClick ={{onbtn ? "off btn" : "on btn"}}>onClick</button> */}
@@ -26,10 +25,27 @@ function sideBar() {
                     <GrAdd className="S-icon" />
                   </button>
                   <button className="sideBarButton">
-                    <RiLayoutBottomFill className="S-icon" />{" "}
+                    <RiLayoutBottomFill className="S-icon" />
                   </button>
                   <button className="sideBarButton">
                     <IoMdRefresh className="S-icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="btnAmountBox">
+              <div className="totalAmount"></div>
+              <div className="towBtnHoldOderandPorduct">
+                <div className="holdBtn ">
+                  <button className="tableBtn">Hold oder</button>
+                </div>
+                <div className="productBtn">
+                  <button
+                    className="tableBtn"
+                    style={{ backgroundColor: "green", border: "none" }}
+                  >
+                    product
                   </button>
                 </div>
               </div>

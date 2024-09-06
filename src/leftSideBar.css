@@ -25,6 +25,6 @@
   border-radius: 5px;
 }
 .anyIcon:hover {
-  border: 3.5px solid orange;
+  outline: 3.5px solid orange;
   border-radius: 8px;
 }

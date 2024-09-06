@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Form from "./pages/From";
+import Page from "./pagenotfound.jsx";
 
 // import Mainrecipyside from "./mainRecipySide.jsx";
 
@@ -21,14 +22,19 @@ function App() {
       <div className="topAndSideBarFLex">
         <div className="leftAndCenter">
           <Leftsidebar />
-          <Secoundnav />
-          {/* <Mainrecipyside /> */}
-          <Routes>
-            <Route path="/Home" element={<Home />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="/Form" element={<Form />} />
-          </Routes>
+          <div className="secoundNavBavANdMaiSide">
+            <Secoundnav />
+            {/* <Mainrecipyside /> */}
+            <div className="router">
+              <Routes>
+                <Route path="/Home" element={<Home />} />
+                <Route path="/About" element={<About />} />
+                <Route path="/Contact" element={<Contact />} />
+                <Route path="/Form" element={<Form />} />
+                <Route path="/*" element={<Page />} />
+              </Routes>
+            </div>
+          </div>
         </div>
         <Sidebar />
       </div>
