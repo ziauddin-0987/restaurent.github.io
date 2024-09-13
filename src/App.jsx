@@ -15,6 +15,7 @@ import Page from "./pagenotfound.jsx";
 // import Mainrecipyside from "./mainRecipySide.jsx";
 
 import "./App.css";
+import Customers from "./pages/Customers.jsx";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/About" element={<About />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/Form" element={<Form />} />
+                <Route path="/Form" element={<Customers />} />
                 <Route path="/*" element={<Page />} />
               </Routes>
             </div>
