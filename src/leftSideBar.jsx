@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import { CiHome } from "react-icons/ci";
 import { CiSettings } from "react-icons/ci";
 import { BsPerson } from "react-icons/bs";
@@ -8,7 +8,7 @@ import { PiCurrencyDollarSimple } from "react-icons/pi";
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
 import { CiClock2 } from "react-icons/ci";
 import { RiLogoutCircleLine } from "react-icons/ri";
-// import { Link } from "reacr-router-dom";
+import { Link } from "react-router-dom";
 
 import "./leftSideBar.css";
 
@@ -18,10 +18,10 @@ function LeftSideBat() {
       <div className="mainIcon zia uddin khan ">
         <div className="sevenIcon">
           <div className="oneIcon ">
-            <CiHome className=" anyIcon" />
+          <Link to="/">  <CiHome className=" anyIcon" /></Link>
           </div>
           <div className="towIcon">
-            <BsPerson className=" anyIcon" />
+            <Link to="/about"><BsPerson className=" anyIcon" /></Link>
           </div>
           <div className="threeIcon ">
             <CiViewTable className=" anyIcon" />
@@ -41,7 +41,7 @@ function LeftSideBat() {
         </div>
         <div className="logInIconBox">
           <div className="sevenIcon ">
-            <RiLogoutCircleLine className="logInIcon anyIcon" />
+          <Link to="/form">  <RiLogoutCircleLine className="logInIcon anyIcon" /></Link>
           </div>
         </div>
       </div>
