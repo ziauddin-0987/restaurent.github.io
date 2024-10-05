@@ -7,7 +7,7 @@
   padding-left: 10px;
   align-items: center;
   background-color: #f0f0f0;
-  width: 43.6rem;
+  width: 34.6rem;
   height: 4rem;
 }
 .listItems {
@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  width: 41.4rem;
+  width: 32.6rem;
   height: 2.5rem;
   border: 1px solid rgb(210, 207, 207);
   list-style-type: none;

@@ -5,6 +5,7 @@
 
 .TopNavBarTag {
   display: flex;
+  /* display: none; */
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -13,6 +14,7 @@
   border-bottom: 1px solid rgb(210, 207, 207);
 }
 .HeadingAndInput {
+  /* display: none; */
   width: 50%;
   height: 4rem;
   display: flex;
@@ -21,6 +23,7 @@
 }
 
 .searchInput {
+  /* display: none;  */
   width: 20rem;
   height: 2rem;
   border-radius: 15px;
@@ -41,3 +44,29 @@
   color: white;
   font-size: 19px;
 }
+@media only screen and (max-width: 1000px) {
+  /* .threeittems, */
+  .HeadingAndInput {
+    gap: 3rem;
+    /* display: none; */
+  }
+  .searchInput {
+    width: 18;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .searchInput {
+    width: 15rem;
+  }
+}
+@media only screen and (max-width: 775px) {
+  .searchInput,
+  .threeittems {
+    display: none;
+  }
+}
+/* @media only screen and (min-width: 800px) {
+  .TopNavBarTag {
+    display: none;
+  }
+} */
