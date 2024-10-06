@@ -2,8 +2,8 @@ import React from "react";
 import Sidebar from "./components/sideBar.jsx";
 import Leftsidebar from "./components/leftSideBar.jsx";
 import Topnavbar from "./components/topNavBar.jsx";
-import Secoundnav from "./components/secoundNav.jsx";
-import { Outlet } from "react-router-dom";
+import Secondnav from "./components/secoundNav.jsx";
+// import { Outlet } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           {/* <Outlet /> */}
           <Leftsidebar />
           <div className="secoundNavBavANdMaiSide">
-            <Secoundnav />
+            <Secondnav />
           </div>
           {/* <Outlet /> */}
         </div>

@@ -17,13 +17,11 @@ function Home() {
     <>
       <h1> hallo home</h1>
       {apis.map((e) => {
-        return (
-          <>
-            <h1>Home :{e.idMeal}</h1>
-            {/* <h1> title :{e.title}</h1> */}
-          </>
-        );
+        // return;
+        // return
+        return <div key={e.idMeal}>{e.strMeal}</div>;
       })}
+
       {/* <h1>Home{apis.id}</h1>
       <h1> title{apis.title}</h1>
       <h2> Link access this line {data.tital}</h2> */}
@@ -32,3 +30,11 @@ function Home() {
 }
 
 export default Home;
+// {apis.map((e) => {
+//   return (
+//     <>
+//       <h1>Home :{e.title}</h1>
+//       {/* <h1> title :{e.title}</h1> */}
+//     </>
+//   );
+// })}

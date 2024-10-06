@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, Input, Select, Space } from "antd";
+import { Button, Form, Input, Space } from "antd";
 import "./form.css";
 // const { Option } = Select;
 const layout = {
