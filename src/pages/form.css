@@ -1,12 +1,44 @@
-pagenotfound.jsx  * {
-  padding: 0%;
-  margin: 0%;
+* {
+  padding: 0;
+  margin: 0;
 }
-.forms {
-  width: 40rem;
-  height: 40rem;
+
+.form {
+  width: 30rem;
+  height: 20rem;
+  border: 1px solid #ccc;
+}
+.formHeader {
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  /* border: 1px solid black; */
+  align-items: center;
+}
+.inputStyling {
+  width: 15rem;
+  margin: 10px;
+  height: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 23px;
+  border-color: #ccc;
+}
+.btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  /* background-color: #1a1a1a; */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.btn:hover {
+  border-color: #646cff;
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }

@@ -1,134 +1,62 @@
 import React from "react";
-import { Button, Form, Input, Space } from "antd";
 import "./form.css";
-// const { Option } = Select;
-const layout = {
-  labelCol: {
-    span: 8,
-  },
-  wrapperCol: {
-    span: 16,
-  },
-};
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
-const App = () => {
-  const [form] = Form.useForm();
-  const onGenderChange = (value) => {
-    switch (value) {
-      case "male":
-        form.setFieldsValue({
-          note: "Hi, man!",
-        });
-        break;
-      case "female":
-        form.setFieldsValue({
-          note: "Hi, lady!",
-        });
-        break;
-      case "other":
-        form.setFieldsValue({
-          note: "Hi there!",
-        });
-        break;
-      default:
+
+function login() {
+  const [emails, setEmails] = React.useState("");
+  const [pass, setPass] = React.useState("");
+  const [data, steData] = React.useState([]);
+
+  const formSubmint = (e) => {
+    e.preventDefault();
+
+    setEmails("");
+    setPass("");
+    if (emails === "zia123" && pass === "zia123") {
+      alert("login successfull email and password");
+      steData([...data, { emails, pass }]);
+    } else {
+      alert("not valide email and pass");
     }
+    console.log(data);
   };
-  const onFinish = (values) => {
-    console.log(values);
-  };
-  const onReset = () => {
-    form.resetFields();
-  };
-  const onFill = () => {
-    form.setFieldsValue({
-      note: "Hello world!",
-      gender: "male",
-    });
-  };
+  function emailsChange(e) {
+    setEmails(e.target.value);
+  }
+  function passChange(e) {
+    setPass(e.target.value);
+  }
+
   return (
-    <div className="forms">
-      <Form
-        {...layout}
-        form={form}
-        name="control-hooks"
-        onFinish={onFinish}
-        style={{
-          maxWidth: 600,
-        }}
-      >
-        <Form.Item
-          name="note"
-          label="Note"
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          placeholder="inter your password"
-          name="gender"
-          label="Gender"
-          rules={[
-            {
-              required: true,
-            },
-          ]}
-        >
-          {/* <Select */}
-          <Input
-            placeholder="inter your password"
-            onChange={onGenderChange}
-            allowClear
-          />
-          {/* <Option value="male">male</Option>
-            <Option value="female">female</Option>
-            <Option value="other">other</Option> */}
-        </Form.Item>
-        <Form.Item
-          noStyle
-          shouldUpdate={(prevValues, currentValues) =>
-            prevValues.gender !== currentValues.gender
-          }
-        >
-          {({ getFieldValue }) =>
-            getFieldValue("password") === "other" ? (
-              <Form.Item
-                name="customizeGender"
-                label="Customize Gender"
-                rules={[
-                  {
-                    password: true,
-                  },
-                ]}
-              >
-                <Input />
-              </Form.Item>
-            ) : null
-          }
-        </Form.Item>
-        <Form.Item {...tailLayout}>
-          <Space>
-            <Button type="primary" htmlType="submit">
-              Submit
-            </Button>
-            <Button htmlType="button" onClick={onReset}>
-              Reset
-            </Button>
-            <Button type="link" htmlType="button" onClick={onFill}>
-              Fill form
-            </Button>
-          </Space>
-        </Form.Item>
-      </Form>
-    </div>
+    <>
+      <div className="form">
+        <div className="formHeader">
+          <div className="formBox">
+            <h1>login from </h1>
+            <input
+              className="inputStyling"
+              type="email"
+              placeholder="email.com"
+              value={emails}
+              onChange={emailsChange}
+            />
+            <br></br>
+            <input
+              className="inputStyling"
+              type="password"
+              placeholder="password"
+              value={pass}
+              onChange={passChange}
+            />
+            <br></br>
+
+            <button className="btn" onClick={formSubmint}>
+              submint
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
-export default App;
+}
+
+export default login;

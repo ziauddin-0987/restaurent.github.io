@@ -24,7 +24,7 @@ function LeftSideBat() {
           </div>
           <div className="towIcon">
             <Link to="about">
-              {" "}
+           
               <BsPerson className=" anyIcon" />
             </Link>
           </div>
@@ -46,7 +46,9 @@ function LeftSideBat() {
         </div>
         <div className="logInIconBox">
           <div className="sevenIcon ">
-            <RiLogoutCircleLine className="logInIcon anyIcon" />
+            <Link to="form">
+              <RiLogoutCircleLine className="logInIcon anyIcon" />
+            </Link>
           </div>
         </div>
       </div>
