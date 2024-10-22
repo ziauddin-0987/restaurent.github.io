@@ -14,25 +14,18 @@ const route = createBrowserRouter([
     element: <App />,
     errorElement: <Pagenotfound />,
     children: [
+      { path: "Home", element: <Home /> },
+      {
+        path: "About",
+        element: <About />,
+      },
+      {
+        path: "Contact",
+        element: <Contact />,
+      },
       {
         path: "Form",
         element: <Form />,
-        errorElement: <Pagenotfound />,
-        children: [
-            { path: "Home", element: <Home /> },
-          {
-            path: "About",
-            element: <About />,
-          },
-          {
-            path: "Contact",
-            element: <Contact />,
-          },
-          // {
-          //   path: "Form",
-          //   element: <Form />,
-          // },
-        ],
       },
     ],
   },

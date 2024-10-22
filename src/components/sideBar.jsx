@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GrAdd } from "react-icons/gr";
 import { IoMdRefresh } from "react-icons/io";
 import { RiLayoutBottomFill } from "react-icons/ri";
@@ -6,6 +6,15 @@ import { RiLayoutBottomFill } from "react-icons/ri";
 import "./sideBar.css";
 
 function sideBar() {
+  const [quantity, setQuantity] = useState("");
+  const [discount, setDiscount] = useState("");
+  const [data, setData] = useState([]);
+  function addBtn() {
+    console.log(setData(discount + quantity));
+    setQuantity("");
+    setDiscount("");
+  }
+
   return (
     <>
       {/* <button onClick ={{onbtn ? "off btn" : "on btn"}}>onClick</button> */}
@@ -41,17 +50,45 @@ function sideBar() {
 
             <div className="btnAmountBox">
               <div className="totalAmount">
-                <div className="amount"> this is amount</div>
+                {/* <div className="amount"> this is amount</div> */}
+                <label htmlFor="">quantity</label>
+                <input
+                  type="number"
+                  // name="number"
+                  id="quantity"
+                  className="quantity ditals"
+                  onChange={(e) => {
+                    setQuantity(e.target.value);
+                  }}
+                  value={quantity}
+                />
+                <label htmlFor="">discount</label>
+                <input
+                  type="number"
+                  // name="number"
+                  id="discount"
+                  className="discount ditals"
+                  onChange={(e) => {
+                    setDiscount(e.target.value);
+                  }}
+                  value={discount}
+                />
+              </div>
+              <div className="datashow">
+                {quantity}
+                {discount}
               </div>
             </div>
             <div className="towBtnHoldOderandPorduct">
               <div className="holdBtn ">
                 <button className="tableBtn">Hold oder</button>
               </div>
+
               <div className="productBtn">
                 <button
                   className="tableBtn"
                   style={{ backgroundColor: "green", border: "none" }}
+                  onClick={addBtn}
                 >
                   product
                 </button>
