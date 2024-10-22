@@ -15,7 +15,12 @@ function sideBar() {
             <div className="topSideBarAllIconIn">
               <div className="sideIcon">
                 <div className="oneIconInSideBar">
-                  <button className="sideBarButtonAdd" onClick={() => {}}>
+                  <button
+                    className="sideBarButtonAdd"
+                    onClick={() => {
+                      console.log("add button  clicked");
+                    }}
+                  >
                     <GrAdd className="S-icon" />
                     <span className="spanText"> add customers</span>
                   </button>
@@ -35,19 +40,21 @@ function sideBar() {
             </div>
 
             <div className="btnAmountBox">
-              <div className="totalAmount"></div>
-              <div className="towBtnHoldOderandPorduct">
-                <div className="holdBtn ">
-                  <button className="tableBtn">Hold oder</button>
-                </div>
-                <div className="productBtn">
-                  <button
-                    className="tableBtn"
-                    style={{ backgroundColor: "green", border: "none" }}
-                  >
-                    product
-                  </button>
-                </div>
+              <div className="totalAmount">
+                <div className="amount"> this is amount</div>
+              </div>
+            </div>
+            <div className="towBtnHoldOderandPorduct">
+              <div className="holdBtn ">
+                <button className="tableBtn">Hold oder</button>
+              </div>
+              <div className="productBtn">
+                <button
+                  className="tableBtn"
+                  style={{ backgroundColor: "green", border: "none" }}
+                >
+                  product
+                </button>
               </div>
             </div>
           </div>

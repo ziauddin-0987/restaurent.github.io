@@ -19,7 +19,7 @@ const route = createBrowserRouter([
         element: <Form />,
         errorElement: <Pagenotfound />,
         children: [
-          { path: "Home", element: <Home /> },
+            { path: "Home", element: <Home /> },
           {
             path: "About",
             element: <About />,

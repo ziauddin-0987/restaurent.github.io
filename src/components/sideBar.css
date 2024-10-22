@@ -18,7 +18,7 @@
   /* display: none; */
   display: flex;
 
-  height: 48rem;
+  height: 42rem;
   width: 30rem;
   box-shadow: 2px;
   /* background-color: #c2fbd7; */
@@ -90,6 +90,8 @@
 .oneIconInSideBar {
   display: flex;
   justify-content: space-around;
+  height: 8rem;
+
   align-items: center;
 }
 /* span text  */
@@ -98,10 +100,17 @@
 }
 .totalAmount {
   width: 100%;
-  height: 9rem;
+  height: 10rem;
   background-color: #f0f0f0;
 }
-.btnAmountBox{
-  /* display: flex; */
+.btnAmountBox {
+  width: 100%;
+  height: 30rem;
+  border: 1px solid #f0f0f0;
+  display: flex;
   /* position: ; */
+}
+.amount {
+  width: 100%;
+  /* height: 60rem; */
 }
