@@ -10,16 +10,12 @@ function sideBar() {
   const [discount, setDiscount] = useState("");
   const [data, setData] = useState([]);
   function addBtn() {
-    console.log(setData(discount + quantity));
-    const modul = () => {
-      const combining1 = discount / 1000;
-      const combining2 = quantity % 100;
-      const combining3 = combining1 - combining2;
-      console.log(combining3);
-    };
-    modul();
+    // console.log();
+    setData(discount, quantity);
     // setQuantity("");
     // setDiscount("");
+    setDiscount("");
+    setQuantity("");
   }
 
   return (
@@ -89,13 +85,19 @@ function sideBar() {
                   </div>
                 </div>
               </div>
-              <div className="datashow">
-                {/* {data} */}
-                {/* {discount} */}
-              </div>
+              {/* <div className="datashow"> */}
+              {/* {data} */}
+              {/* {discount} */}
+              {/* </div> */}
+            </div>
+            <div className="datashow">
+              {data.map((e) => {
+                return <div className="allproductDataSave">{e.value}</div>;
+              })}
+              {data}
+              {/* {discount} */}
             </div>
             <div className="towBtnHoldOderandPorduct">
-              {data}
               <div className="holdBtn ">
                 <button className="tableBtn">Hold oder</button>
               </div>
