@@ -1,18 +1,19 @@
 import React, { useEffect } from "react";
+import "./home.css";
 
 function Home() {
   const [apis, setApis] = React.useState([]);
-  useEffect(() => {
-    fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=cake")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setApis(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
+  // useEffect(async () => {
+  const myFunc = async () => {
+    const get = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=cake`
+    );
+    const res = await get.json();
+    console.log(res.meals);
+    setApis(res.meals);
+  };
+  // myFunc();
+  // }, []);
 
   // console.log(res);
 
@@ -20,8 +21,15 @@ function Home() {
     <>
       <h1> hallo home</h1>
       {apis.map((e) => {
-        return <div key={e.idMeal}>{e.title}</div>;
+        return (
+          <div key={e.idMeal}>
+            {e.title}
+            <img src={e.strMealThumb} alt="api img" className="apiImg" />
+            <h4>{e.strIngredient7}</h4>
+          </div>
+        );
       })}
+      <button onClick="myFunc">click</button>
     </>
   );
 }
