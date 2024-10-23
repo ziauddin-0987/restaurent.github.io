@@ -11,8 +11,15 @@ function sideBar() {
   const [data, setData] = useState([]);
   function addBtn() {
     console.log(setData(discount + quantity));
-    setQuantity("");
-    setDiscount("");
+    const modul = () => {
+      const combining1 = discount / 1000;
+      const combining2 = quantity % 100;
+      const combining3 = combining1 - combining2;
+      console.log(combining3);
+    };
+    modul();
+    // setQuantity("");
+    // setDiscount("");
   }
 
   return (
@@ -51,35 +58,44 @@ function sideBar() {
             <div className="btnAmountBox">
               <div className="totalAmount">
                 {/* <div className="amount"> this is amount</div> */}
-                <label htmlFor="">quantity</label>
-                <input
-                  type="number"
-                  // name="number"
-                  id="quantity"
-                  className="quantity ditals"
-                  onChange={(e) => {
-                    setQuantity(e.target.value);
-                  }}
-                  value={quantity}
-                />
-                <label htmlFor="">discount</label>
-                <input
-                  type="number"
-                  // name="number"
-                  id="discount"
-                  className="discount ditals"
-                  onChange={(e) => {
-                    setDiscount(e.target.value);
-                  }}
-                  value={discount}
-                />
+                <div className="towInputs">
+                  <div className="firstInput">
+                    <label htmlFor="quantityNumber">quantity</label>
+                    <br />
+                    <input
+                      type="number"
+                      name="quantityNumber"
+                      id="quantity"
+                      className="quantity ditals"
+                      onChange={(e) => {
+                        setQuantity(e.target.value);
+                      }}
+                      value={quantity}
+                    />
+                  </div>
+                  <div className="secundInput">
+                    <label htmlFor="discountNumber">discount</label>
+                    <br />
+                    <input
+                      type="number"
+                      name="discountNumber"
+                      id="discount"
+                      className="discount ditals"
+                      onChange={(e) => {
+                        setDiscount(e.target.value);
+                      }}
+                      value={discount}
+                    />
+                  </div>
+                </div>
               </div>
               <div className="datashow">
-                {quantity}
-                {discount}
+                {/* {data} */}
+                {/* {discount} */}
               </div>
             </div>
             <div className="towBtnHoldOderandPorduct">
+              {data}
               <div className="holdBtn ">
                 <button className="tableBtn">Hold oder</button>
               </div>
