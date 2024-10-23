@@ -24,24 +24,33 @@ function LeftSideBat() {
           </div>
           <div className="towIcon">
             <Link to="about">
-           
               <BsPerson className=" anyIcon" />
             </Link>
           </div>
           <div className="threeIcon ">
-            <CiViewTable className=" anyIcon" />
+            <Link to="table">
+              <CiViewTable className=" anyIcon" />
+            </Link>
           </div>
           <div className="fourIcon ">
-            <PiCurrencyDollarSimple className=" anyIcon" />
+            <Link to="doller">
+              <PiCurrencyDollarSimple className=" anyIcon" />
+            </Link>
           </div>
           <div className="fiveIcon ">
-            <PiShoppingCartSimpleLight className=" anyIcon" />
+            <Link to="shop">
+              <PiShoppingCartSimpleLight className=" anyIcon" />
+            </Link>
           </div>
           <div className="sixIcon">
-            <CiClock2 className=" anyIcon" />
+            <Link to="time">
+              <CiClock2 className=" anyIcon" />
+            </Link>
           </div>
           <div className="sevenIcon ">
-            <CiSettings className=" anyIcon" />
+            <Link to="setting">
+              <CiSettings className=" anyIcon" />
+            </Link>
           </div>
         </div>
         <div className="logInIconBox">

@@ -6,7 +6,11 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Form from "./pages/Form.jsx";
 import Pagenotfound from "./pages/pagenotfound.jsx";
-// import Home from "./pages/Home.jsx"
+import Time from "./pages/time.jsx";
+import Doller from "./pages/doller.jsx";
+import Table from "./pages/table.jsx";
+import Setting from "./pages/setting.jsx";
+import Shop from "./pages/shop.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 const route = createBrowserRouter([
   {
@@ -26,6 +30,26 @@ const route = createBrowserRouter([
       {
         path: "Form",
         element: <Form />,
+      },
+      {
+        path: "Setting",
+        element: <Setting />,
+      },
+      {
+        path: "doller",
+        element: <Doller />,
+      },
+      {
+        path: "table",
+        element: <Table />,
+      },
+      {
+        path: "time",
+        element: <Time />,
+      },
+      {
+        path: "shop",
+        element: <Shop />,
       },
     ],
   },

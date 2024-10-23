@@ -9,6 +9,7 @@ function sideBar() {
   const [quantity, setQuantity] = useState("");
   const [discount, setDiscount] = useState("");
   const [data, setData] = useState([]);
+  let a = 1;
   function addBtn() {
     // console.log();
     setData(discount, quantity);
@@ -21,7 +22,7 @@ function sideBar() {
   return (
     <>
       {/* <button onClick ={{onbtn ? "off btn" : "on btn"}}>onClick</button> */}
-      <div className="sideBar  zia">
+      <div className="sideBar  ">
         <div className="topSideBar">
           <div className="sidesecund">
             <div className="topSideBarAllIconIn">
@@ -30,7 +31,14 @@ function sideBar() {
                   <button
                     className="sideBarButtonAdd"
                     onClick={() => {
-                      console.log("add button  clicked");
+                      if (a == 1) {
+                        console.log("on this button ");
+                        a = 0;
+                      } else if (a == 0) {
+                        console.log("off this button");
+                        a = 1;
+                      }
+                      // console.log("add button  clicked");
                     }}
                   >
                     <GrAdd className="S-icon" />
@@ -85,10 +93,6 @@ function sideBar() {
                   </div>
                 </div>
               </div>
-              {/* <div className="datashow"> */}
-              {/* {data} */}
-              {/* {discount} */}
-              {/* </div> */}
             </div>
             <div className="datashow">
               {data.map((e) => {
