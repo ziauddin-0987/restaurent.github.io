@@ -8,18 +8,25 @@
   gap: 20px;
 }
 .apiImgfirstBoxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   margin: 5px;
-  padding: 3px;
+  padding: 3px 0px 3px 6px;
   width: 8rem;
+  height: 12rem;
   box-shadow: 0.5px 1px 3px 0.5px #ccc;
   display: inline-block;
   /* border: 1px solid black; */
 }
 .AllItemsInBox {
-  overflow: scroll;
+  overflow-y: scroll;
   height: 38rem;
 }
 .imgBox {
   display: flex;
+}
+.apiText {
+  text-align: center;
 }

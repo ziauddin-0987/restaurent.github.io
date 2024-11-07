@@ -19,7 +19,7 @@ function LeftSideBat() {
         <div className="sevenIcon">
           <div className="oneIcon ">
             <Link to="home">
-              <CiHome className=" anyIcon" />
+              <CiHome className=" anyIcon" aria-placeholder="home" />
             </Link>
           </div>
           <div className="towIcon">
@@ -55,9 +55,9 @@ function LeftSideBat() {
         </div>
         <div className="logInIconBox">
           <div className="sevenIcon ">
-            <Link to="form">
-              <RiLogoutCircleLine className="logInIcon anyIcon" />
-            </Link>
+            {/* <Link to="form"> */}
+            <RiLogoutCircleLine className="logInIcon anyIcon" />
+            {/* </Link> */}
           </div>
         </div>
       </div>

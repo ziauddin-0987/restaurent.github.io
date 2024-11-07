@@ -2,25 +2,47 @@ import React, { useState } from "react";
 import { GrAdd } from "react-icons/gr";
 import { IoMdRefresh } from "react-icons/io";
 import { RiLayoutBottomFill } from "react-icons/ri";
-
+import { RxCross1 } from "react-icons/rx";
+// import { useSelector, useDispatch } from "react-redux";
+// import { increment } from "../features/counter/counterSlice.js";
 import "./sideBar.css";
 
 function sideBar() {
-  const [quantity, setQuantity] = useState("");
-  const [discount, setDiscount] = useState("");
-  const [data, setData] = useState([]);
+  // const count = useSelector((state) => state.counter.value);
+  // const dispatch = useDispatch();
   let a = 1;
+  const [quantity, setQuantity] = useState(parseInt(0));
+  const [discount, setDiscount] = useState(parseInt(0));
+  const [getData, setGetData] = useState([]);
+
   function addBtn() {
-    // console.log();
-    setData(discount, quantity);
-    // setQuantity("");
-    // setDiscount("");
-    setDiscount("");
-    setQuantity("");
+    if (quantity == "" && discount == "") {
+      alert("pleas is from the full feal");
+    } else {
+      parseInt(quantity);
+      parseInt(discount);
+      setGetData([...getData, { discount, quantity }]);
+      // setGetData(parseInt(discount));
+      setDiscount("");
+      setQuantity("");
+      // console.log(getData.index());
+    }
+  }
+  function discountDataChange(e) {
+    setDiscount(e.target.value);
+  }
+  function quantityDataChange(e) {
+    setQuantity(e.target.value);
   }
 
   return (
     <>
+      {/* <button
+        aria-label="Increment value"
+        onClick={() => dispatch(increment())}
+      >
+        Increment
+      </button> */}
       {/* <button onClick ={{onbtn ? "off btn" : "on btn"}}>onClick</button> */}
       <div className="sideBar  ">
         <div className="topSideBar">
@@ -42,7 +64,7 @@ function sideBar() {
                     }}
                   >
                     <GrAdd className="S-icon" />
-                    <span className="spanText"> add customers</span>
+                    <span className="spanText"> add card</span>
                   </button>
                 </div>
                 <div className="threeBtnInDiv">
@@ -71,9 +93,7 @@ function sideBar() {
                       name="quantityNumber"
                       id="quantity"
                       className="quantity ditals"
-                      onChange={(e) => {
-                        setQuantity(e.target.value);
-                      }}
+                      onChange={quantityDataChange}
                       value={quantity}
                     />
                   </div>
@@ -85,25 +105,37 @@ function sideBar() {
                       name="discountNumber"
                       id="discount"
                       className="discount ditals"
-                      onChange={(e) => {
-                        setDiscount(e.target.value);
-                      }}
+                      onChange={discountDataChange}
                       value={discount}
                     />
                   </div>
                 </div>
               </div>
             </div>
+            {/* {count} */}
             <div className="datashow">
-              {data.map((e) => {
-                return <div className="allproductDataSave">{e.value}</div>;
+              {getData.map((e) => {
+                return (
+                  <div className="allproductDataSave" key={(e.id = "1")}>
+                    {e.quantity + e.discount}
+                    <div className="crossAndTextBox">
+                      <RxCross1
+                        onClick={(e) => {
+                          setGetData((e) => {
+                            e.filter((task) => task.id !== "");
+                          });
+                        }}
+                      ></RxCross1>
+                    </div>
+                  </div>
+                );
               })}
-              {data}
-              {/* {discount} */}
             </div>
             <div className="towBtnHoldOderandPorduct">
               <div className="holdBtn ">
-                <button className="tableBtn">Hold oder</button>
+                <button className="tableBtn" onChange={(e) => {}}>
+                  Hold oder
+                </button>
               </div>
 
               <div className="productBtn">
