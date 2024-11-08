@@ -4,7 +4,7 @@ import apiSlice from "../features/counterSlice";
 
 const store = configureStore({
   reducer: {
-    apis: apiSlice,
+    api: apiSlice,
   },
 });
 export default store;
