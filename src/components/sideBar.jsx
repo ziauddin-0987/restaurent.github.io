@@ -10,11 +10,13 @@ import "./sideBar.css";
 function sideBar() {
   // const count = useSelector((state) => state.counter.value);
   // const dispatch = useDispatch();
-  let a = 1;
+
   const [quantity, setQuantity] = useState(parseInt(0));
   const [discount, setDiscount] = useState(parseInt(0));
   const [getData, setGetData] = useState([]);
+  const [items, setItems] = useState();
 
+  // setGetData({ id: Date.now });
   function addBtn() {
     if (quantity == "" && discount == "") {
       alert("pleas is from the full feal");
@@ -34,6 +36,9 @@ function sideBar() {
   function quantityDataChange(e) {
     setQuantity(e.target.value);
   }
+  const removeItem = (itemToRemove) => {
+    setItems((prevItems) => prevItems.filter((item) => item !== itemToRemove));
+  };
 
   return (
     <>
@@ -114,18 +119,13 @@ function sideBar() {
             </div>
             {/* {count} */}
             <div className="datashow">
-              {getData.map((e) => {
+              {getData.map((items, index) => {
                 return (
-                  <div className="allproductDataSave" key={(e.id = "1")}>
-                    {e.quantity + e.discount}
+                  <div className="allproductDataSave">
+                    {/* {index.parseInt(quantity) + index.parseInt(discount)} */}
                     <div className="crossAndTextBox">
-                      <RxCross1
-                        onClick={(e) => {
-                          setGetData((e) => {
-                            e.filter((task) => task.id !== "");
-                          });
-                        }}
-                      ></RxCross1>
+                      <RxCross1 onClick={() => {}}></RxCross1>
+                      {items}
                     </div>
                   </div>
                 );
@@ -133,7 +133,12 @@ function sideBar() {
             </div>
             <div className="towBtnHoldOderandPorduct">
               <div className="holdBtn ">
-                <button className="tableBtn" onChange={(e) => {}}>
+                <button
+                  className="tableBtn"
+                  onChange={(e) => {
+                    removeItem;
+                  }}
+                >
                   Hold oder
                 </button>
               </div>
@@ -155,3 +160,32 @@ function sideBar() {
   );
 }
 export default sideBar;
+// {
+//   items.map((item, index) => (
+//     <li key={index}>
+//       {item}
+//       <button onClick={() => removeItem(item)}>Remove</button>
+//     </li>
+//   ));
+// }
+
+// const deleteItem = (id) => {
+//   // Filter out the item with the given id
+//   const updatedItems = items.filter(item => item.id !== id);
+//   setItems(updatedItems); // Update the state
+// };
+
+// return (
+//   <div>
+//       <h2>Item List</h2>
+//       <ul>
+//           {items.map(item => (
+//               <li key={item.id}>
+//                   {item.name}
+//                   <button onClick={() => deleteItem(item.id)}>Delete</button>
+//               </li>
+//           ))}
+//       </ul>
+//   </div>
+// );
+// };

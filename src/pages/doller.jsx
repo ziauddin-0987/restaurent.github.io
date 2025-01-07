@@ -1,8 +1,8 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 // import { useSelector, useDispatch } from "react-redux";
 // import { increment, decrement } from "../features/counterSlice";
-import viteLogo from "/vite.svg";
+// import viteLogo from "/vite.svg";
 // import "./App.css";
 // import React from "react";
 
@@ -14,7 +14,6 @@ function doller() {
     <>
       <div>doller</div>
 
-    
       <div>
         {/* <h1>{count}</h1> */}
         {/* <button onClick={() => dispatch(increment())}>Increment</button>
