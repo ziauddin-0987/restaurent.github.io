@@ -1,37 +1,30 @@
-// // src/features/apiSlice.js
-// import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-// // import { client } from '@/api/client'; // Assume you have a client setup for API calls
+import { createSlice } from '@reduxjs/toolkit'
 
-// export const fetchData = createAsyncThunk("api/fetchData", async () => {
-//   const response = await fetch(
-//     "https://www.themealdb.com/api/json/v1/1/search.php?s=cake"
-//   );
-//   const result = response.json(); // Replace with your API endpoint
-//   return result;
-// });
+const initialState = {
+  value: 0,
+}
 
-// const apiSlice = createSlice({
-//   name: "api",
-//   initialState: {
-//     data: [],
-//     status: "idle", // 'idle' | 'pending' | 'succeeded' | 'failed'
-//     error: null,
-//   },
-//   reducers: {},
-//   extraReducers: (builder) => {
-//     builder
-//       .addCase(fetchData.pending, (state) => {
-//         state.status = "pending";
-//       })
-//       .addCase(fetchData.fulfilled, (state, action) => {
-//         state.status = "succeeded";
-//         state.data = action.payload;
-//       })
-//       .addCase(fetchData.rejected, (state, action) => {
-//         state.status = "failed";
-//         state.error = action.error.message;
-//       });
-//   },
-// });
+export const counterSlice = createSlice({
+  name: 'counter',
+  initialState,
+  reducers: {
+    increment: (state) => {
+      // Redux Toolkit allows us to write "mutating" logic in reducers. It
+      // doesn't actually mutate the state because it uses the Immer library,
+      // which detects changes to a "draft state" and produces a brand new
+      // immutable state based off those changes
+      state.value += 1
+    },
+    // decrement: (state) => {
+    //   state.value -= 1
+    // },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload
+    },
+  },
+})
 
-// export default apiSlice.reducer;
+// Action creators are generated for each case reducer function
+export const { increment,  incrementByAmount } = counterSlice.actions
+
+export default counterSlice.reducer

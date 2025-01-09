@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { increment } from "../features/counterSlice";
 import { GrAdd } from "react-icons/gr";
 import "./home.css";
 
 function Home() {
-  const [count ,setCount ] = usestate('')
-
-function addValues(){
-console.log(  setCount(++1))
-}
+  // const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch();
+  // function addValues() {
+  //   // console.log("ok");
+  //   () => dispatch(increment())
+  // }
   // var myFunc;
   const [apis, setApis] = React.useState([]);
   useEffect(() => {
@@ -35,13 +38,12 @@ console.log(  setCount(++1))
               {/* {e.title} */}
               <div className="allProduceLineByLine">
                 <div className="apiImgfirstBoxes">
-                  <button className="sideBarButton"className="adds"
-                  onClick={addValues} >
+                  <button className="sideBarButton adds">
                     <GrAdd
                       className="adds "
-                  
-                    >
-                      {count}</GrAdd>.
+                      onClick={() => dispatch(increment())}
+                    ></GrAdd>
+                    .
                   </button>
                   <img src={e.strMealThumb} alt="api img" className="apiImg" />
                   <h4 className="apiText">{e.strMeal}</h4>

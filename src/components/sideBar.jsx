@@ -3,12 +3,13 @@ import { GrAdd } from "react-icons/gr";
 import { IoMdRefresh } from "react-icons/io";
 import { RiLayoutBottomFill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
-// import { useSelector, useDispatch } from "react-redux";
-// import { increment } from "../features/counter/counterSlice.js";
+import { useSelector } from "react-redux";
+import { increment } from "../features/counterSlice.js";
 import "./sideBar.css";
 
 function sideBar() {
-  // const count = useSelector((state) => state.counter.value);
+  const count = useSelector((state) => state.counter.value);
+
   // const dispatch = useDispatch();
 
   const [quantity, setQuantity] = useState(parseInt(0));
@@ -33,6 +34,7 @@ function sideBar() {
   function discountDataChange(e) {
     setDiscount(e.target.value);
   }
+
   function quantityDataChange(e) {
     setQuantity(e.target.value);
   }
@@ -56,7 +58,7 @@ function sideBar() {
               <div className="sideIcon">
                 <div className="oneIconInSideBar">
                   <button
-                    className="sideBarButtonAdd"
+                    className="sideBarButtonAdd posi"
                     onClick={() => {
                       if (a == 1) {
                         console.log("on this button ");
@@ -68,8 +70,9 @@ function sideBar() {
                       // console.log("add button  clicked");
                     }}
                   >
-                    <GrAdd className="S-icon" />
+                    <GrAdd className="S-icon " />
                     <span className="spanText"> add card</span>
+                    <span className="countColor">{count}</span>
                   </button>
                 </div>
                 <div className="threeBtnInDiv">

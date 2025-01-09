@@ -10,7 +10,10 @@
   bottom: 10px;
 }
 .adds {
-  width: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
   height: 20px;
 }
 .apiImg {
