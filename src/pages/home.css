@@ -39,6 +39,8 @@
   display: inline-block;
 }
 .allProduceLineByLine {
+  /* gap:2rem */
+  margin:3px;
 }
 .AllItemsInBox {
   overflow-y: scroll;

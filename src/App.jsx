@@ -12,15 +12,15 @@ function App() {
       <Topnavbar />
       <div className="topAndSideBarFLex">
         <div className="leftAndCenter">
-          {/* <Outlet /> */}
+          
           <Leftsidebar />
           <div className="secoundNavBavANdMaiSide">
             <Secondnav />
           </div>
-          {/* <Outlet /> */}
+        
         </div>
-        <Sidebar />
-        {/* <Outlet /> */}
+        <Sidebar className="siderBar"/>
+    
       </div>
     </>
   );

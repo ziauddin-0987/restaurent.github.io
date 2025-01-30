@@ -20,6 +20,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border:hidden;
 }
 
 .searchInput {
@@ -27,8 +28,33 @@
   width: 20rem;
   height: 2rem;
   border-radius: 15px;
-  border: 1px solid rgb(210, 207, 207);
+  border:none;
+  padding-left: 10px;
+  /* border: 1px solid rgb(210, 207, 207); */
 }
+.inputAndSerchBtn{
+  /* color:white; */
+  border :1px solid rgb(210, 207, 207);
+  border-radius:30px ;
+display:flex;
+background-color: rgb(210, 207, 207);;
+}
+.searchBtnBox{
+  display: flex;
+  justify-content: center;
+  width:3rem;
+  /* height:3rem */
+}
+
+.inputSearchBtn{
+  /* color:rgb(210, 207, 207); */
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+
+
+
 .threeittems {
   display: flex;
 }

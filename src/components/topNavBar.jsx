@@ -3,6 +3,8 @@ import { RiRefreshLine } from "react-icons/ri";
 import { FcBullish } from "react-icons/fc";
 // import { CiSearch } from "react-icons/ci";
 import { FaTable } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
+
 import "./topNavBar.css";
 import "./leftSideBar.css";
 
@@ -26,13 +28,23 @@ export default function TopNavBar() {
           <div className="thsInHeading">
             <h1>Restaurent</h1>
           </div>
+<div className="inputAndSerchBtn">
+
           <div className="input">
             <input
               type="search "
               className="searchInput"
               onChange={hendalEvent}
-            />
+              placeholder="search..."
+              />
           </div>
+<div className="searchBtnBox">
+  <CiSearch className="inputSearchBtn"/>
+  
+  </div>          
+              </div>
+
+
         </div>
         <div className="refershNetworkButtom">
           <div className="threeittems">

@@ -18,7 +18,7 @@ import Signup from "./pages/sign-up.jsx";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import "./";
+// import "./";
 
 const route = createBrowserRouter([
   {

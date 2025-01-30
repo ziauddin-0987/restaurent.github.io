@@ -1,8 +1,14 @@
-.topAndSideBarFLex,
+.topAndSideBarFLex{
+  display: grid;
+}
+
+
 .leftAndCenter {
   display: flex;
   justify-content: space-between;
 }
+
+
 .secoundNavBavANdMaiSide {
   display: block;
 }
