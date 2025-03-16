@@ -41,9 +41,9 @@ function Home() {
                   <button className="sideBarButton adds">
                     <GrAdd
                       className="adds "
-                      onClick={() => dispatch(increment())}
+                      onClick={() => (dispatch(increment()))}
                     ></GrAdd>
-                    .
+              
                   </button>
                   <img src={e.strMealThumb} alt="api img" className="apiImg" />
                   <h4 className="apiText">{e.strMeal}</h4>

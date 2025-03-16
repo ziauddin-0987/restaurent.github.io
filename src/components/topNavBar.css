@@ -24,11 +24,11 @@
 }
 
 .searchInput {
-  /* display: none;  */
+  border: none; 
   width: 20rem;
   height: 2rem;
   border-radius: 15px;
-  border:none;
+  outline:none;
   padding-left: 10px;
   /* border: 1px solid rgb(210, 207, 207); */
 }
@@ -37,7 +37,9 @@
   border :1px solid rgb(210, 207, 207);
   border-radius:30px ;
 display:flex;
-background-color: rgb(210, 207, 207);;
+background-color: rgb(245, 15, 15);
+cursor:pointer;
+/* background-color: rgb(210, 207, 207);; */
 }
 .searchBtnBox{
   display: flex;
@@ -47,16 +49,20 @@ background-color: rgb(210, 207, 207);;
 }
 
 .inputSearchBtn{
-  /* color:rgb(210, 207, 207); */
+  color:white;
   font-size: xx-large;
   font-weight: 800;
+
 }
 
 
 
 
 .threeittems {
+  /* margin-top:3px; */
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tableBtn {
@@ -69,24 +75,25 @@ background-color: rgb(210, 207, 207);;
   border: 3.5px solid rgb(255, 136, 0);
   color: white;
   font-size: 19px;
+  cursor:pointer;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   /* .threeittems, */
   .HeadingAndInput {
-    gap: 3rem;
+    gap: 4rem;
     /* display: none; */
   }
   .searchInput {
     width: 18;
   }
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1000px) {
   .searchInput {
     width: 15rem;
   }
 }
-@media only screen and (max-width: 775px) {
-  .searchInput,
+@media only screen and (max-width: 900px) {
+.inputAndSerchBtn,
   .threeittems {
     display: none;
   }

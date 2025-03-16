@@ -1,5 +1,6 @@
 .topAndSideBarFLex{
-  display: grid;
+  display: flex;
+  /* grid-template-columns: repeat(); */
 }
 
 
@@ -10,7 +11,7 @@
 
 
 .secoundNavBavANdMaiSide {
-  display: block;
+  display: flex;
 }
 .router {
   width: 100%;

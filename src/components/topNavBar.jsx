@@ -1,20 +1,53 @@
-import React from "react";
+import {useState} from "react";
 import { RiRefreshLine } from "react-icons/ri";
 import { FcBullish } from "react-icons/fc";
 // import { CiSearch } from "react-icons/ci";
 import { FaTable } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
+import Siders from "./sideBar.jsx";
+import { MdFormatListBulleted } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import "./topNavBar.css";
 import "./leftSideBar.css";
 
 export default function TopNavBar() {
-  //  const [Values , setValues] = useState("")
-  //  const [data , setData] = useState([])
+  // let siderbars = "";
+  const dispatch = useDispatch();
+
+  // const Side = useSelector((state) => state.counter.value);
+// function inputClicks(){
+
+// }
+// if (a == 1) {
+//   console.log("on this button ");
+//   let siderbars= Side
+//   // <Siders/>
+//   a = 0;
+// } else if (a == 0) {
+//   console.log("off this button");
+//   let siderbars= ""
+//   a = 1;
+// }
+
+function abc(){
+
+  <Siders/>
+  // useDispatch()
+}
+ 
+   const [Values , setValues] = useState("")
+   const [data , setData] = useState([])
+  let a =1;
 
   function hendalEvent(e) {
-    console.log(e.target.value);
-    setValues(e.target.value, ...Values, setData(push(values)));
+    // console.log(e.target.value);
+    // setValues(e.target.value, ...Values, setData(push(values)));
+     
+   
+
+
   }
   function reload(e) {
     window.location.reload();
@@ -55,9 +88,18 @@ export default function TopNavBar() {
               <FcBullish className="anyIcon" />
             </div>
             <div className="button">
-              <button className="tableBtn ">
-                <FaTable /> select table
+               {/* onClick={} */}
+
+
+
+               <Link to="sider">
+              <button className="tableBtn " >
+                <FaTable  /> select table
               </button>
+              </Link>
+            </div>
+            <div className="manu">
+              <MdFormatListBulleted/>
             </div>
           </div>
         </div>

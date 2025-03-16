@@ -3,7 +3,6 @@ import { CiHome } from "react-icons/ci";
 import { CiSettings } from "react-icons/ci";
 import { BsPerson } from "react-icons/bs";
 import { CiViewTable } from "react-icons/ci";
-
 import { PiCurrencyDollarSimple } from "react-icons/pi";
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
 import { CiClock2 } from "react-icons/ci";

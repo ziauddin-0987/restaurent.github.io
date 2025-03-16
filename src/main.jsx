@@ -13,6 +13,7 @@ import Setting from "./pages/setting.jsx";
 import Shop from "./pages/shop.jsx";
 import Login from "./pages/login.jsx";
 import Signup from "./pages/sign-up.jsx";
+import Sider from "./components/sideBar.jsx"
 // import { Provider } from "react-redux";
 // import store from "./app/store";
 import { Provider } from "react-redux";
@@ -26,7 +27,16 @@ const route = createBrowserRouter([
     element: <App />,
     errorElement: <Pagenotfound />,
     children: [
-      { path: "Home", element: <Home /> },
+      { path: "Home",
+         element: <Home /> ,
+         children:[
+        {
+          path:"sider",
+        element:<Sider/>  ,
+        }
+      ]
+       
+      },
       {
         path: "About",
         element: <About />,
@@ -62,7 +72,8 @@ const route = createBrowserRouter([
       {
         path: "sign-up",
         element: <Signup />,
-      },
+      }, 
+    
     ],
   },
 ]);

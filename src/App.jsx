@@ -7,6 +7,8 @@ import Secondnav from "./components/secoundNav.jsx";
 import "./App.css";
 
 function App() {
+  // const sideBox = useContext()
+  // const [side,setside] = usestate(<Sidebar/>)
   return (
     <>
       <Topnavbar />
@@ -16,10 +18,15 @@ function App() {
           <Leftsidebar />
           <div className="secoundNavBavANdMaiSide">
             <Secondnav />
+            {/* <Outlet/> */}
+        {/* <Sidebar className="siderBar"/> */}
           </div>
         
         </div>
-        <Sidebar className="siderBar"/>
+        {/* <sideBox.provider value="side"> */}
+          
+ 
+        {/* </sideBox.provider> */}
     
       </div>
     </>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useContext} from "react";
 import { GrAdd } from "react-icons/gr";
 import { IoMdRefresh } from "react-icons/io";
 import { RiLayoutBottomFill } from "react-icons/ri";
@@ -8,6 +8,7 @@ import { increment } from "../features/counterSlice.js";
 import "./sideBar.css";
 
 function sideBar() {
+
   const count = useSelector((state) => state.counter.value);
 
   // const dispatch = useDispatch();
