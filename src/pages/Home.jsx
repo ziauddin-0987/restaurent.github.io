@@ -45,7 +45,10 @@ function Home() {
                     ></GrAdd>
               
                   </button>
+                  <div className="emtyBoxInImg">
                   <img src={e.strMealThumb} alt="api img" className="apiImg" />
+
+                  </div>
                   <h4 className="apiText">{e.strMeal}</h4>
                   {/* < >{e.strIngredient2}</h4> */}
                   <h4 className="apiText">{e.strIngredient2}</h4>

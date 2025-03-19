@@ -4,7 +4,7 @@ import { IoMdRefresh } from "react-icons/io";
 import { RiLayoutBottomFill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 import { useSelector } from "react-redux";
-import { increment } from "../features/counterSlice.js";
+// import { increment } from "../features/counterSlice.js";
 import "./sideBar.css";
 
 function sideBar() {
@@ -80,12 +80,7 @@ function sideBar() {
                   <button className="sideBarButton">
                     <GrAdd className="S-icon" />
                   </button>
-                  <button className="sideBarButton">
-                    <RiLayoutBottomFill className="S-icon" />
-                  </button>
-                  <button className="sideBarButton">
-                    <IoMdRefresh className="S-icon" />
-                  </button>
+                 
                 </div>
               </div>
             </div>

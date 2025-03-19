@@ -7,8 +7,7 @@ import Secondnav from "./components/secoundNav.jsx";
 import "./App.css";
 
 function App() {
-  // const sideBox = useContext()
-  // const [side,setside] = usestate(<Sidebar/>)
+  
   return (
     <>
       <Topnavbar />

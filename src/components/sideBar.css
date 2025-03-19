@@ -5,6 +5,8 @@
 }
 .countColor {
   position: absolute;
+
+
   top: -8px;
   right: -8px;
   display: flex;
@@ -32,7 +34,7 @@
   /* display: none; */
   display: flex;
 
-  height: 42rem;
+  height: 41rem;
   width: 30rem;
   box-shadow: 2px;
   /* background-color: #c2fbd7; */

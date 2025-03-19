@@ -92,7 +92,7 @@ function abc(){
 
 
 
-               <Link to="sider">
+               <Link to="home/sider">
               <button className="tableBtn " >
                 <FaTable  /> select table
               </button>
