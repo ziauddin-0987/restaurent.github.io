@@ -35,31 +35,35 @@
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  margin: 8.5px;
-  padding: 2px;
+  margin: 10.3px;
+  /* padding: 2px; */
   width: 11rem;
   height: 13rem;
   box-shadow: 0.5px 1px 3px 0.5px #ccc;
   display: inline-block;
   /* border: 1px solid black; */
 }
-.AllItemsInBoxA {
+.AllItemsInBox{
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(7,1fr);
-  grid-template-rows: repeat(1,1fr);
+  grid-template-rows: repeat(2,1fr);
 }
 .allProduceLineByLine {
   /* gap:2rem */
-  margin:3px;
+  margin:4px;
 }
 .AllItemsInBox {
+  /* overflow: auto; */
+  overflow-x: hidden; 
   overflow-y: scroll;
-  height: 38rem;
+  height: 41rem;
   width: 100%;
+  /* display: grid;
+  grid-template-columns: repeat(7,1fr);
+  grid-template-rows: repeat(1,1fr); */
 }
-.AllItemsInBox {
-  display: inline-block;
-}
+
 .imgBox {
   display: flex;
 }
@@ -68,38 +72,111 @@
 }
 
 /* responsive home recepy */
-@media only screen and (min-width: 1487px) {
-  /* body {
-    background-color: lightblue;
-    .
-  } */
 
-  .allProduceLineByLine{
-    display:grid;
-    row-gap: 2rem;
-    column-gap:2rem;
-    grid-template-columns:repeat(1,1fr);
-    grid-template-rows:repeat(1,1fr);
-    width:100%;
+
+
+
+@media only screen and (max-width :1370px ){
+  
+  .AllItemsInBox{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2,1fr);
   }
-  /* width:100%;
-  padding: 10px;
-  margin:10px; */
+  .allProduceLineByLine {
+    /* gap:2rem */
+    margin:3px;
+  }
+
 }
 
-
-
-@media only screen and (min-width :1286px ){
+@media only screen and (max-width :1150px ){
   
-  .allProduceLineByLine{
-    display:grid;
-    row-gap: 2rem;
-    column-gap:2rem;
-    /* grid-column-start: 1; */
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-    /* grid-template-columns:repeat(1,1fr); */
-    /* grid-template-rows:repeat(1,1fr); */
-    width:100%;
+  .AllItemsInBox{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
   }
 
+  .allProduceLineByLine {
+    /* gap:2rem */
+    margin:2px;
+  }
+}
+@media only screen and (max-width :1050px ){
+  
+  .AllItemsInBox{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+  }
+
+  .allProduceLineByLine {
+    /* gap:2rem */
+    margin:2px;
+  }
+
+
+
+
+
+
+
+
+}
+@media only screen and (max-width :750px ){
+  
+  .AllItemsInBox{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .allProduceLineByLine {
+    /* gap:2rem */
+    margin:2px;
+  }
+}
+@media only screen and (max-width :600px ){
+  
+  .AllItemsInBox{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .allProduceLineByLine {
+    /* gap:2rem */
+    margin:2px;
+  }
+}
+@media only screen and (max-width :400px ){
+  
+  .AllItemsInBox{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .allProduceLineByLine {
+    /* gap:2rem */
+    margin:2px;
+  }
+  .AllItemsInBox {
+    /* overflow: auto; */
+    overflow-x: hidden; 
+    overflow-y: scroll;
+    height: 40rem;
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(1,1fr); */
+  }
+  
 }

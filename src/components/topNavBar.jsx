@@ -99,7 +99,7 @@ function abc(){
               </Link>
             </div>
             <div className="manu">
-              <MdFormatListBulleted/>
+              <MdFormatListBulleted className="manuBtn"/>
             </div>
           </div>
         </div>

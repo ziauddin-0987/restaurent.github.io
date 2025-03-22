@@ -3,6 +3,7 @@
   margin: 0%;
 }
 
+
 .TopNavBarTag {
   display: flex;
   /* display: none; */
@@ -97,9 +98,14 @@ cursor:pointer;
   .threeittems {
     display: none;
   }
-}
-/* @media only screen and (min-width: 800px) {
-  .TopNavBarTag {
-    display: none;
+  .manuBtn{
+    display: block;
   }
-} */
+}
+@media only screen and (max-width: 850px) {
+.manuBtn{
+  display: hidden;
+}
+
+}
+
