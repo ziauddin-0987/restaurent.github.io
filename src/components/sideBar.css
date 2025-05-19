@@ -24,10 +24,11 @@
   position: relative;
 }
 .sideBar {
+  width:36rem;;
   /* display: none; */
   /* padding: 20px; */
   display: flex;
-  justify-content: end;
+  /* justify-content: ; */
 }
 
 .topSideBar {
@@ -74,10 +75,11 @@
   height: 4rem;
 }
 .threeBtnInDiv {
+  /* position:absolute; */
   width: 12rem;
   height: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content:left;
 }
 /* side bar button */
 
@@ -94,12 +96,14 @@
   /* font-size: 21px; */
 }
 .sideBarButton {
+  /* position:relative; */
+  /* right:14rem; */
   width: 3rem;
   cursor: pointer;
   border: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   border-radius: 5px;
 }
 .towBtnHoldOderandPorduct,

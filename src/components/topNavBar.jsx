@@ -98,9 +98,9 @@ function abc(){
               </button>
               </Link>
             </div>
-            <div className="manu">
+            {/* <div className="manu">
               <MdFormatListBulleted className="manuBtn"/>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

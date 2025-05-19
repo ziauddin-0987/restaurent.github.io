@@ -18,7 +18,7 @@ function App() {
           <div className="secoundNavBavANdMaiSide">
             <Secondnav />
             {/* <Outlet/> */}
-        {/* <Sidebar className="siderBar"/> */}
+        <Sidebar className="siderBar"/>
           </div>
         
         </div>

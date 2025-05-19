@@ -77,9 +77,9 @@ function sideBar() {
                   </button>
                 </div>
                 <div className="threeBtnInDiv">
-                  <button className="sideBarButton">
+                  {/* <button className="sideBarButton">
                     <GrAdd className="S-icon" />
-                  </button>
+                  </button> */}
                  
                 </div>
               </div>
